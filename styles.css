@@ -3,21 +3,13 @@
 }
 /*
 * [1]
-* Creates 3 coulmn tracks
-* [2]
-* Creates 2 coulmn tracks
-* [3]
-* This is a property for automatically created rows. Those rows will have this property if they dont fit in the column tracks that are set.
-* [4] 
-* Short hand for the properties: grid-column-gap and grid-row-gap;
+* Using fr to give the grid tracks that grow and are flexible with the available space.
+* In you for instance give the property a value of 2fr 1 fr 1fr. What it does to the space 
 */
 .grid {
 	display:grid;
-	grid-template-columns:200px 200px 200px; /* [1] */
-	grid-template-rows:200px 100px; /* [2] */
-	grid-auto-rows:100px; /* [3] */
-	grid-gap:20px; /* [3] */
-
+	grid-template-columns:2fr 1fr 200px; /* [1] */
+	grid-gap:20px;
 }
 .grid div {
 	color:#fff;
