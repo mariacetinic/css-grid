@@ -3,12 +3,15 @@
 }
 /*
 * [1]
-* Using fr to give the grid tracks that grow and are flexible with the available space.
-* In you for instance give the property a value of 2fr 1 fr 1fr. What it does to the space 
+* Repeat notation
+* -- - -- -
+* -- - -- -
+* Above is the result of the repeat notation.
+* So, this one shows that you can have multiple track listing, not only one, like this one: repeat(3, fr);
 */
 .grid {
 	display:grid;
-	grid-template-columns:2fr 1fr 200px; /* [1] */
+	grid-template-columns:repeat(2, 2fr 1fr); /* [1] */
 	grid-gap:20px;
 }
 .grid div {
