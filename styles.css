@@ -3,18 +3,17 @@
 }
 /*
 * [1]
-* Repeat notation
+* Minmax function
 * -- - -- -
 * -- - -- -
-* Above is the result of the repeat notation.
-* So, this one shows that you can have multiple track listing, not only one, like this one: repeat(3, frgit );
-* Note: The repeating part doesn’t have to be the only part of your track listing
-* grid-template-columns:100px repeat(2fr 1 fr 1fr);  Which means that one track is 100px and the rest of the tracks are the repeating section.
+* So if I want my automatically created rows to have a minimum size and a size to fit the content I use a minimum size 
+* for instance 60px and then max auto. That will do so the row adjusts automatically to fit the content. 
 */
 .grid {
 	display:grid;
-	grid-template-columns:repeat(2, 2fr 1fr); /* [1] */
+	grid-template-columns:1fr 1fr 1fr;
 	grid-gap:20px;
+	grid-auto-rows:minmax(60px, auto); /* [1] */
 }
 .grid div {
 	color:#fff;
