@@ -1,7 +1,22 @@
 * {
 	box-sizing:border-box;
 }
+/*
+* [1]
+* Creates 3 coulmn tracks
+* [2]
+* Creates 2 coulmn tracks
+* [3]
+* This is a property for automatically created rows. Those rows will have this property if they dont fit in the column tracks that are set.
+* [4] 
+* Short hand for the properties: grid-column-gap and grid-row-gap;
+*/
 .grid {
+	display:grid;
+	grid-template-columns:200px 200px 200px; /* [1] */
+	grid-template-rows:200px 100px; /* [2] */
+	grid-auto-rows:100px; /* [3] */
+	grid-gap:20px; /* [3] */
 
 }
 .grid div {
@@ -12,5 +27,19 @@
 	background-color:#343d46;
 }
 .grid div:nth-child(odd) {
+	background-color:#8390ad;
+}
+
+.flex {
+	display:flex;
+}
+.flex div {
+	color:#fff;
+	padding:10px;
+}
+.flex div:nth-child(even) {
+	background-color:#e8d0b9;
+}
+.flex div:nth-child(odd) {
 	background-color:#8390ad;
 }
