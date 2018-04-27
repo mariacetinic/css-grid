@@ -3,17 +3,18 @@
 }
 /*
 * [1]
-* Minmax function
+* Auto placement
 * -- - -- -
 * -- - -- -
-* So if I want my automatically created rows to have a minimum size and a size to fit the content I use a minimum size 
-* for instance 60px and then max auto. That will do so the row adjusts automatically to fit the content. 
+* By default the direct children of the grid layout are being layed out by row. 
 */
 .grid {
 	display:grid;
 	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows:100px 100px 100px;
 	grid-gap:20px;
 	grid-auto-rows:minmax(60px, auto); /* [1] */
+	grid-auto-flow:column;
 }
 .grid div {
 	color:#fff;
