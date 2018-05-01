@@ -3,20 +3,21 @@
 }
 /*
 * [1]
-* Auto-fill and auto-fit keywords
+* Line-based position
 * -- - -- -
 * -- - -- -
-* In order to change an items order, you have to specify the rest of the items' order
-* This order-property only changes the visuals, not in the mark-up. Can be imporant to 
-* have in mind if you work with accessability.
+* 
+	grid-column-start:1;
+	grid-column-end:-1;
+* Samma princip med row
 */
 .grid {
 	display:grid;
 	grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
 	grid-gap:20px;
 }
-.grid div:nth-child(2) {
-	order:1;
+.grid div:nth-child(1) {
+	grid-column:1/-1;
 }
 .grid div {
 	order:2;
