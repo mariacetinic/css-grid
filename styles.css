@@ -3,20 +3,23 @@
 }
 /*
 * [1]
-* Auto placement
+* Auto-fill and auto-fit keywords
 * -- - -- -
 * -- - -- -
-* By default the direct children of the grid layout are being layed out by row. 
+* In order to change an items order, you have to specify the rest of the items' order
+* This order-property only changes the visuals, not in the mark-up. Can be imporant to 
+* have in mind if you work with accessability.
 */
 .grid {
 	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-template-rows:100px 100px 100px;
+	grid-template-columns:repeat(auto-fill, 150px);
 	grid-gap:20px;
-	grid-auto-rows:minmax(60px, auto); /* [1] */
-	grid-auto-flow:column;
+}
+.grid div:nth-child(2) {
+	order:1;
 }
 .grid div {
+	order:2;
 	color:#fff;
 	padding:10px;
 }
@@ -26,7 +29,6 @@
 .grid div:nth-child(odd) {
 	background-color:#8390ad;
 }
-
 .flex {
 	display:flex;
 }
